@@ -1,0 +1,74 @@
+@media (max-width: 768px) {
+    #content {
+        display: block !important;
+    }
+    #info {
+        width: 100% !important;
+        margin-bottom: 40px !important;
+    }
+    #members {
+        width: 100% !important;
+    }
+    th {
+        font-size: 20px !important;
+    }
+}
+
+
+body {
+    background-color: rgb(0, 15, 29);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    color: rgb(207, 207, 207);
+}
+#content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#info {
+    text-align: center;
+    width: 40%;
+    float: left;
+}
+#members {
+    width: 50%;
+}
+#members > table {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+    height: 80vh;
+    width: 80%;
+    margin: auto;
+    color: rgb(207, 207, 207);
+}
+th {
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+td, th {
+    width: 10%;
+    height: 35px;
+    border: 1px solid black;
+}
+table tr:nth-child(even) {
+    background-color: rgb(75, 75, 75);
+}
+table tr:nth-child(odd) {
+    background-color: rgb(0, 0, 0);
+}
+#eselyszam, #emberszam {
+    color: rgb(114, 215, 255);
+}
+#korabbi {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+#jelenlegisorsolas {
+    text-align: center;
+}
