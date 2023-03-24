@@ -12,6 +12,9 @@
     th {
         font-size: 20px !important;
     }
+    #members > table {
+        width: 100% !important;
+    }
 }
 
 
