@@ -15,6 +15,7 @@ async function kiirat() {
     const data = await response.json();
     document.getElementById("emberszam").innerHTML = data.members
     document.getElementById("eselyszam").innerHTML = data.entries
+    document.getElementById("time").innerHTML = data.updated
 
     const tabla = document.getElementById("main")
     const tabla2 = document.getElementById("korabbi")
