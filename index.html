@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1008845924388311090/1026143059081171026/botpfp.png" type="image/png">
     <title>FEE5 Cetli</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dc.css">
 </head>
 
 <body>
@@ -23,16 +24,66 @@
             <h1>Emberek száma: <span id="emberszam"></span></h1>
             <h1>Esélyek száma: <span id="eselyszam"></span></h1>
             <hr style="width: 80%;">
-            <h2>Korábbi sorsolások</h2>
+            
+            <div class="box">
+                <h2 onclick="toggleContent(1)" id="boxtitle1">Korábbi sorsolások ▶</h2>
+                <div class="boxcontent" id="content1">
+                    <table id="korabbi">
+                        <tr>
+                            <th>Dátum</th>
+                            <th>Név</th>
+                            <th>Esély</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 
-            <table id="korabbi">
-                <tr>
-                    <th>Dátum</th>
-                    <th>Név</th>
-                    <th>Esély</th>
-                </tr>
-            </table>
+            <br>
+
+            <hr style="width: 80%;">
+            <div class="box">
+                <h2 onclick="toggleContent(2)" id="boxtitle2">Nyeremények ▶</h2>
+                <div class="boxcontent" id="content2">
+                    <table id="nyeremenyek">
+                        <tr>
+                            <td>
+                                <div class="message-container">
+                                    <img class="avatar"
+                                        src="assets/images/g4rpfp.jpg"
+                                        alt="User Avatar">
+                                    <div class="message-content">
+                                        <div class="username-timestamp">
+                                            <p class="username">Ghost4Rider</p>
+                                            <p class="timestamp">2023.07.28. 13:45</p>
+                                        </div>
+                                        <p class="message-text">A jövőheti nyeremény egy Vikora Level Up Pack lesz! (most vasárnap Mech Arena sorsolás lesz) Szokásos szabályok, USE CODE: GHOST4RIDER --> vásárolsz valamit-->fotó --> ide beküldöd -- > sorsolás! Sok sikert. @everyone  :hypepog:</p>
+                                        <img src="https://cdn.discordapp.com/attachments/716656075230806127/1134451587943776288/F2AGEsVWAAApiVd.jpg" alt="" width="100%">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="message-container">
+                                    <img class="avatar"
+                                        src="assets/images/g4rpfp.jpg"
+                                        alt="User Avatar">
+                                    <div class="message-content">
+                                        <div class="username-timestamp">
+                                            <p class="username">Ghost4Rider</p>
+                                            <p class="timestamp">2023.07.11. 10:01</p>
+                                        </div>
+                                        <p class="message-text">Sziasztok! Most vasárnap egy Fortnite Marvel képregény csomag kódot tudtok nyerni ami azt jelenti hogy megkaptok belőle mindent, a Zero iron Man-t is! Szokásosan USE CODE: GHOST4RIDER :hello:  @everyone</p>
+                                        <img src="https://cdn.discordapp.com/attachments/716656075230806127/1128234498027429938/Fortnite-X-Marvel-Zero-War-Goodies-16x9-1-800x450.png.webp" alt="" width="100%">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
+        
         <div id="members">
             <h1 id="jelenlegisorsolas">Jelenlegi sorsolás</h1>
             <table id="main">
@@ -45,7 +96,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
