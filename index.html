@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="FEE5 Cetli rangosok">
-    <meta name="twitter:description" content="Feco.#1031">
+    <meta name="twitter:description" content="@feco.">
     <meta name="twitter:title" content="FEE5 Cetli rangosok">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1008845924388311090/1026143059081171026/botpfp.png" type="image/png">
     <title>FEE5 Cetli</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dc.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dc.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <h1>Emberek száma: <span id="emberszam"></span></h1>
             <h1>Esélyek száma: <span id="eselyszam"></span></h1>
             <hr style="width: 80%;">
-            
+
             <div class="box">
                 <h2 onclick="toggleContent(1)" id="boxtitle1">Korábbi sorsolások ▶</h2>
                 <div class="boxcontent" id="content1">
@@ -49,7 +49,7 @@
                             <td>
                                 <div class="message-container">
                                     <img class="avatar"
-                                        src="assets/images/g4rpfp.jpg"
+                                        src="g4rpfp.jpg"
                                         alt="User Avatar">
                                     <div class="message-content">
                                         <div class="username-timestamp">
@@ -66,7 +66,7 @@
                             <td>
                                 <div class="message-container">
                                     <img class="avatar"
-                                        src="assets/images/g4rpfp.jpg"
+                                        src="g4rpfp.jpg"
                                         alt="User Avatar">
                                     <div class="message-content">
                                         <div class="username-timestamp">
@@ -83,9 +83,9 @@
                 </div>
             </div>
         </div>
-        
         <div id="members">
             <h1 id="jelenlegisorsolas">Jelenlegi sorsolás</h1>
+            <input type="text" id="searchbar" placeholder="Keresés" oninput="kereses()">
             <table id="main">
                 <tr>
                     <th>Ember neve</th>
@@ -96,7 +96,7 @@
     </div>
 
 
-    <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
