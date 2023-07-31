@@ -6,16 +6,49 @@
         width: 100% !important;
         margin-bottom: 40px !important;
     }
+    #korabbi {
+        width: 100% !important;
+    }
     #members {
         width: 100% !important;
     }
     th {
         font-size: 20px !important;
     }
+    td {
+        font-size: 14px !important;
+    }
     #members > table {
         width: 100% !important;
     }
 }
+
+body::-webkit-scrollbar-track, 
+#korabbi::-webkit-scrollbar-track,
+#nyeremenyek::-webkit-scrollbar-track,
+#main::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgb(53, 53, 53);
+}
+
+body::-webkit-scrollbar, 
+#korabbi::-webkit-scrollbar,
+#nyeremenyek::-webkit-scrollbar,
+#main::-webkit-scrollbar {
+	width: 8px;
+	background-color: rgb(75, 75, 75);
+}
+
+body::-webkit-scrollbar-thumb, 
+#korabbi::-webkit-scrollbar-thumb,
+#nyeremenyek::-webkit-scrollbar-thumb,
+#main::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(114, 215, 255);;
+}
+
 .box > h2 {
     cursor: pointer;
     width: 80%;
@@ -50,7 +83,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     text-align: center;
-    height: 80vh;
+    max-height: 75vh;
     width: 80%;
     margin: auto;
     color: rgb(207, 207, 207);
@@ -88,3 +121,13 @@ td, th {
     text-align: center;
 }
 
+#searchbar {
+    width: 200px;
+    height: 20px;
+    font-size: 16px;
+    margin: 15px auto;
+    display: block;
+    background-color: rgb(53, 53, 53);
+    border: 1px solid rgb(207, 207, 207);
+    color: rgb(114, 215, 255);
+}
