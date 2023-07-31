@@ -1,3 +1,5 @@
+let dataJSON = null;
+
 window.onload = async function(){
     document.getElementById(`content1`).style.display = 'none';
     document.getElementById(`content2`).style.display = 'none';
@@ -15,6 +17,7 @@ async function kiirat() {
     
     let response = await fetch("https://api.jsonbin.io/v3/b/647e070cb89b1e2299aa4c0e?meta=false", settings);
     const data = await response.json();
+    dataJSON = data;
     document.getElementById("emberszam").innerHTML = data.members
     document.getElementById("eselyszam").innerHTML = data.entries
     document.getElementById("time").innerHTML = data.updated
@@ -68,3 +71,70 @@ function toggleContent(divNumber) {
         contentTitle.innerHTML = contentTitle.innerHTML += " ▶"
     }
 } 
+
+function kereses() {
+    tablatorles()
+    tablafejlec()
+
+    const searchvalue = document.getElementById("searchbar").value.trim().toLowerCase();
+
+    if (searchvalue == "") {
+        tablafeltoltes();
+    } else {
+        const tabla = document.getElementById("main")
+
+        for (const key in dataJSON.data) {
+            if (dataJSON.data[key].name.trim().toLowerCase().includes(searchvalue)) {
+                let tr = document.createElement("tr")
+                let td1 = document.createElement("td")
+                let td2 = document.createElement("td")
+        
+                td1.innerHTML = dataJSON.data[key].name
+                td2.innerHTML = dataJSON.data[key].entry
+        
+                tr.appendChild(td1)
+                tr.appendChild(td2)
+        
+                tabla.appendChild(tr)
+            }
+        }
+    }
+}
+
+function tablatorles() {
+    let elements = document.getElementById('main');
+    while (elements.firstChild) {
+        elements.removeChild(elements.firstChild);
+    }
+}
+function tablafejlec() {
+    const tabla = document.getElementById('main');
+    const trelem = document.createElement("tr")
+
+    const th1elem = document.createElement("th")
+    th1elem.innerHTML = "Ember neve"
+    trelem.appendChild(th1elem)
+
+    const th2elem = document.createElement("th")
+    th2elem.innerHTML = "Esélyek száma"
+    trelem.appendChild(th2elem)
+
+    tabla.appendChild(trelem)
+}
+function tablafeltoltes() {
+    const tabla = document.getElementById("main")
+
+    for (const key in dataJSON.data) {
+        let tr = document.createElement("tr")
+        let td1 = document.createElement("td")
+        let td2 = document.createElement("td")
+
+        td1.innerHTML = dataJSON.data[key].name
+        td2.innerHTML = dataJSON.data[key].entry
+
+        tr.appendChild(td1)
+        tr.appendChild(td2)
+
+        tabla.appendChild(tr)
+    }
+}
