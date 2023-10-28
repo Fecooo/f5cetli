@@ -10,12 +10,12 @@ async function kiirat() {
     const settings  = {
         method : "GET",
         headers: {
-            "X-Master-Key" : "$2b$10$SfmHs07KWIbJ0qkMaDbnmu2YwfzREojeVKjcEn.1q1ZjWf05qdZmG",
+            "X-Master-Key" : "$2a$10$pF9rmIPkQ9KRLGjzi3BeVOkbKo7SWanrN65adJAWrO2GqGLlmWaki",
             "Content-Type": "application/json"
         }
     }
     
-    let response = await fetch("https://api.jsonbin.io/v3/b/64de3eb39d312622a392af10?meta=false", settings);
+    let response = await fetch("https://api.jsonbin.io/v3/b/653ccd3512a5d37659919c3b?meta=false", settings);
     const data = await response.json();
     dataJSON = data;
     document.getElementById("emberszam").innerHTML = data.members
