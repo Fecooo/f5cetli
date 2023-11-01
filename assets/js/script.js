@@ -7,15 +7,15 @@ window.onload = async function(){
 }
 
 async function kiirat() {
-    const settings  = {
+    /*const settings  = {
         method : "GET",
         headers: {
             "X-Master-Key" : "$2a$10$pF9rmIPkQ9KRLGjzi3BeVOkbKo7SWanrN65adJAWrO2GqGLlmWaki",
             "Content-Type": "application/json"
         }
-    }
+    }*/
     
-    let response = await fetch("https://api.jsonbin.io/v3/b/653ccd3512a5d37659919c3b?meta=false", settings);
+    let response = await fetch("https://f5api.sparkedservers.us/f5cetli");
     const data = await response.json();
     dataJSON = data;
     document.getElementById("emberszam").innerHTML = data.members
